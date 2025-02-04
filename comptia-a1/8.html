@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navigation Start -->
+    <nav>
+        <div>
+            <h1><a href="../index.html">Overwatch<strong>X</strong></a></h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Learning Hub</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog & Insights</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+    <a href="./overview.html">Back to Overview</a>
+    <h1>Virtualization Concepts</h1>
+    <h2>Virtualization</h2>
+    <ul>
+        <li>Virtualization</li>
+        <ul>
+            <li>Host computer installed with a hypervisor that can be used to install and manage multiple guest operating systems or virtual machines (VMs)</li>
+            <ul>
+                <li>Type I Hypervisor (Mare Metal)</li>
+                <ul>
+                    <li>Runs directly on the host hardware and functions as the operating system</li>
+                </ul>
+                <li>Type II Hypervisor</li>
+                <ul>
+                    <li>Runs within the normal operating system</li>
+                </ul>
+            </ul>
+            <li>Ensure that each virtual machine runs its own copy of an operating system</li>
+            <ul>
+                <li>Server-based (Terminal services)</li>
+                <ul>
+                    <li>Server-based solution that runs the application on servers in a centralized location</li>
+                </ul>
+                <li>Client-based (Application streaming)</li>
+                <ul>
+                    <li>Cliet-based solution that allows an application to be packaged up and streamed directly to a user's PC</li>
+                </ul>
+            </ul>
+        </ul>
+    </ul>
+    <hr>
+    <h2>Containerization</h2>
+    <ul>
+        <li>Containerization</li>
+        <ul>
+            <li>Type of virtualization applied by a host operating system to provision an isolated execution environment for an application</li>
+            <ul>
+                <li>Docker</li>
+                <li>Parallels Virtuozzo</li>
+                <li>OpenVZ</li>
+            </ul>
+        </ul>
+    </ul>
+    <ol>
+        <li>When a physical server crashes, all the organizations hosted on that same server are affected</li>
+        <li>An organization's failure to secure the virtual environments hosted on a shared server poses a security risk for other organizations</li>
+        <ul>
+            <li>Set up virtual servers in the cloud with proper failover, redundancy, and elasticity</li>
+            <li>Hosting all VMs on the same type of hypervisor can also be exploited</li>
+            <ul>
+                <li>Proper configurations</li>
+                <li>Patched up-to-date hypervisor</li>
+                <li>Tight access control</li>
+            </ul>
+        </ul>
+    </ol>
+    <hr>
+    <h2>Purposes of VMs</h2>
+    <ul>
+        <li>Hypervisor</li>
+        <ul>
+            <li>Manages the distribution of the the physical resources of a server to the VMs</li>
+            <ul>
+                <li>Type I</li>
+                <ul>
+                    <li>Bare metal</li>
+                </ul>
+                <li>Type 2</li>
+                <ul>
+                    <li>Type II</li>
+                    <ul>
+                        <li>Hosted</li>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        <li>Container-Based Virtualization (Containerization)</li>
+        <ul>
+            <li>Each container relies on a common host OS as the base for each container</li>
+            <li>Container-based virtualization has less resources because it doesn't require its own copy of the OS for individual container/li>
+        </ul>
+        <li>Hyperconverged Infrastructure</li>
+        <ul>
+            <li>Allows for the full integration of the storage, network, and servers without hardware changes</li>
+        </ul>
+        <li>Application Virtualization</li>
+        <ul>
+            <li>Encapsulates computer programs from the underlying OS on which they are executed</li>
+        </ul>
+        <li>Virtual Desktop Infrastructure (VDI)</li>
+        <ul>
+            <li>Hosts desktop OSs within a virtualized environment hosted by a centralized server or server farm</li>
+        </ul>
+        <li>Sandbox</li>
+        <ul>
+            <li>An isolated environment for analyzing pieces of malware</li>
+        </ul>
+        <li>Cross-Platform Virtualization</li>
+        <ul>
+            <li>Allows for the testing and running of software applications for different operating systems</li>
+            <ul>
+                <li>Emulation</li>
+                <ul>
+                    <li>System imitation</li>
+                </ul>
+                <li>Virtualization</li>
+                <ul>
+                    <li>New "physical" Machine</li>
+                </ul>
+            </ul>
+        </ul>
+    </ul>
+    <hr>
+    <h2>Resource Requirements</h2>
+    <ul>
+        <li>Second Level Address Translation (SLAT)</li>
+        <ul>
+            <li>Improves the performance of virtual memory when running multiple virtual machines on a single physical host</li>
+            <ul>
+                <li>Intel</li>
+                <ul>
+                    <li>Extended Page Table (EPT)</li>
+                </ul>
+                <li>AMD</li>
+                <ul>
+                    <li>Rapid Virtualization Indexing (RVI)</li>
+                </ul>
+            </ul>
+            <li>x86</li>
+            <ul>
+                <li>32-bit processor</li>
+                <li>32-bit operating system can only access 4GB of RAM</li>
+            </ul>
+            <li>x64</li>
+            <ul>
+                <li>16 exabytes of RAM</li>
+                <li>32-bit processor cannot run a 64-bit application</li>
+            </ul>
+        </ul>
+        <li>ARM</li>
+        <ul>
+            <li>Reduced instruction set and computer architecture in a computer processor</li>
+        </ul>
+        <li>System Memory</li>
+        <ul>
+            <li>Amount of physical memory installed on a physical server</li>
+            <li>Barebones Windows installation takes 20-50 GB of space</li>
+            <li>Linux installation takes 4-8 GB of space</li>
+            <li>Mac environment takes 20-40 GB of space</li>
+        </ul>
+        <li>NIC teaming configuration allows multiple cards for higher speeds</li>
+        <ul>
+            <li>CPU, processor, and capabilities</li>
+            <li>System Memory</li>
+            <li>Networking</li>
+            <li>Storage</li>
+        </ul>
+    </ul>
+    <hr>
+    <h2>Security Requirements</h2>
+    <ul>
+        <li>VM Escape</li>
+        <ul>
+            <li>Threat attempts to get out of an isolated VM and send commands to the underlying hypervisor</li>
+            <li>VM escape is easier to perform on a Type II hypervisor than a Type I hypervisor</li>
+            <ul>
+                <li>Patched </li>
+                <li>Up to date</li>
+            </ul>
+        </ul>
+        <li>VM Hopping</li>
+        <ul>
+            <li>Threat attempts to move from one VM to another on the same host</li>
+            <ul>
+                <li>VM Hopping</li>
+                <ul>
+                    <li>VM to VM</li>
+                </ul>
+                <li>VM Escape</li>
+                <ul>
+                    <li>Vm to hypervisor</li>
+                    <ul>
+                        <li>Up to date</li>
+                        <li>Patched</li>
+                        <li>Securely configured</li>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        <li>Sandbox</li>
+        <ul>
+            <li>Seperates running processes and programs to mitigate system failures or software vulnerabilities</li>
+        </ul>
+        <li>Sandbox Escape</li>
+        <ul>
+            <li>Occurs when an attacker circumvents sandbox protections to gain access to the protected OS or other privileged processes</li>
+            <ul>
+                <li>Patched</li>
+                <li>Up to date</li>
+                <li>Strong endpoint software protection</li>
+                <li>Limited extensions or add-ons</li>
+            </ul>
+        </ul>
+        <li>Live Migration</li>
+        <ul>
+            <li>Migrates the virtual machine from one host to another while it is running</li>
+            <li>Ensures that live migration only occurs on a trusted network or utilizes encryption</li>
+        </ul>
+        <li>Data Remnants</li>
+        <ul>
+            <li>Leftover pieces of data that may exist in the hard drive which are no longer needed</li>
+            <ul>
+                <li>Encrypt virtual machine storage location</li>
+                <li>Destroy Encrption key</li>
+            </ul>
+        </ul>
+        <li>VM Sprawl</li>
+        <ul>
+            <li>Uncontrolled deployment of virtual machines</li>
+        </ul>
+    </ul>
+    <a href="./7.html">Back ()</a>
+    <a href="./9.html">Next ()</a>
+</body>
+</html>

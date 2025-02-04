@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Navigation Start -->
+    <nav>
+        <div>
+            <h1><a href="../index.html">Overwatch<strong>X</strong></a></h1>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Learning Hub</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Blog & Insights</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+    <a href="./overview.html">Back to Overview</a>
+    <h1>BIOS / UEFI</h1>
+    <ul>
+        <li>Basic Input/Output System (BIOS)</li>
+        <ul>
+            <li>Program that a CPU uses to start the computer system</li>
+            <li>BIOS serves as a method of configuring the motherboard using a text-based interface</li>
+        </ul>
+        <li>Firmware</li>
+        <ul>
+            <li>Software on a chip and contains BIOS program codein the flash memory of a motherboard</li>
+        </ul>
+        <li>Unified Extensible Firmware Interface (UEFI)</li>
+        <ul>
+            <li>Supports 64-bit processors and provides a GUI</li>
+        </ul>
+    </ul>
+    <hr>
+    <h2>Boot Options</h2>
+    <ul>
+        <li>BIOS</li>
+        <ul>
+            <li>Program a computer's microprocessor used to start and boot after being turned on</li>
+            <li>BIOS is an example of firmware</li>
+            <ul>
+                <li>Power-on self-test</li>
+                <li>Hardware configuration</li>
+                <li>Boot order setup</li>
+            </ul>
+        </ul>
+        <li>Read-Only Memory (ROM)</li>
+        <ul>
+            <li>Type of chip embedded in the motherboard and can be upgraded through flashing</li>
+        </ul>
+        <li>The new CMOS uses an internallithium-ion battery that can last up to 10 years</li>
+        <li>Power-on Self-Test</li>
+        <ul>
+            <li>Diagnostic testing sequence to check the computer's BIOS</li>
+        </ul>
+        <li>Variable beeps are used to tell what is wrong with the system</li>
+        <ul>
+            <li>e.g. Keyboard is not detected: <i>Two short beeps and one long beep</i></li>
+        </ul>
+        <li>The BIOS has a low-level OS which allows to take input and give output to the basic component</li>
+        <ul>
+            <li>To configure the settings inside CMOS, enter the BIOS configuration environment</li>
+            <ul>
+                <li><code>F2</code></li>
+                <li><code>DEL</code></li>
+                <li><code>ESC</code></li>
+                <li><code>F1</code></li>
+                <li><code>F10</code></li>
+                <li><code>F12</code></li>
+            </ul>
+            <li>BIOS relied on a text-based menu system and a keyboard as its system of input</li>
+        </ul>
+        <li>UEFI</li>
+        <ul>
+            <li>Updated form of BIOS that allows keyboard and mouse as input and provides a GUI</li>
+            <ul>
+                <li>Supports 64-bit systems</li>
+                <li>Supports larger HDDs and SSDs (9.4 zettabytes ~ 9.4 x 10^21 bytes)</li>
+                <li>Supports the new GUID Partition Table (GPT) format</li>
+                <li>Faster boot-up system</li>
+                <li>Uses a larger ROM size</li>
+            </ul>
+            <li>Disable booting from an optical drive or USB drive</li>
+            <li>Configure the system to boot from the installed hard drive using the installed OS</li>
+            <li>Boot the OS using PXE as the primary option</li>
+        </ul>
+        <li>Flashing</li>
+        <ul>
+            <li>performed during upgrades, security fixes, or feature improvements</li>
+            <ul>
+                <li>Back up the configuration and information</li>
+                <li>Use a USB flash drive to flash the firmware</li>
+                <li>The BIOS or UEFI will copy the firmware to the system and overwrite the old code</li>
+            </ul>
+        </ul>
+    </ul>
+    <hr>
+    <h2>BIOS / UEFI Security</h2>
+    <ul>
+        <li>BIOS and UEFI are used during loading and booting up the OS</li>
+        <li>Computers that rely on BIOS use MBR to hold the boot information </li>
+        <li>Computers that rely on UEFI use GPT to hold the boot information</li>
+        <li>Supervisor/Administrator/Setup Password</li>
+        <ul>
+            <li>Used to protect access to the BIOS or UEFI configuration program and prevents access from unauthorized users</li>
+        </ul>
+        <li>User / System Password</li>
+        <ul>
+            <li>Used to lock access to the computer</li>
+        </ul>
+        <li>Storage / Hard Drive password</li>
+        <ul>
+            <li>Password that locks access to a hard drive connected to the system and requires the end user's password</li>
+        </ul>
+        <li>Secure Boot</li>
+        <ul>
+            <li>Enabled in the UEFI interface and settings and is not supported by BIOS</li>
+        </ul>
+        <li>Root Kit</li>
+        <ul>
+            <li>A special type of malware</li>
+        </ul>
+        <li>Modern systems are configured to enable or disable the USB ports on the motherboard</li>
+        <li>Disable the ability of USB to read and write from mass storage devices</li>
+        <ul>
+            <li>Set passwords</li>
+            <li>Enable secure boot</li>
+            <li>Restrict or disbale USB ports</li>
+        </ul>
+    </ul>
+    <hr>
+    <h2>TPM and HSM</h2>
+    <ul>
+        <li>Hardware RoT is the foundation of all secure operations of a computing system</li>
+        <li>Hardware Root of Trust (RoT)</li>
+        <ul>
+            <li>Cryptographic module embedded in a computer system that endorses trusted execution and attests to boot settings and metrics</li>
+        </ul>
+        <li>A hardware RoT is used to scan the boot metrics in the OS files to verify signatures and then use them to sign the report</li>
+        <li>Trusted Platform Modules (TPM)</li>
+        <ul>
+            <li>Specification for hardware-based storage of digital certificates, keys, hashed passwords, and other user and platform identification information</li>
+            <!-- Diagram STart -->
+            <li>Secured Input/Output</li>
+            <ul>
+                <li>Cryptographic Processor</li>
+                <ul>
+                    <li>Random Number generator</li>
+                    <li>RSA Key Generator</li>
+                    <li>SHA-1 hash generator</li>
+                    <li>Encryption-Decryption-Signature Engine</li>
+                </ul>
+                <li>Persistent Memory</li>
+                <ul>
+                    <li>Endorsment Key (EK)</li>
+                    <li>Storage Root Key (SRK)</li>
+                </ul>
+                <li>Versatile Memory</li>
+                <ul>
+                    <li>Platform Configuration Registers (PCR)</li>
+                    <li>Attestation Identity Keys (AIK)</li>
+                    <li>Storage Keys</li>
+                </ul>
+            </ul>
+            <!-- Diagram End -->
+            <ul>
+                <li>TPM is a Hardware RoT</li>
+                <li>Secured boot-up</li>
+                <li>Provides encryption</li>
+            </ul>
+            <li>A TPM can be managed in Windows via tpm.msc console or through group policy</li>
+        </ul>
+        <li>Hardware Security Module (HSM)</li>
+        <ul>
+            <li>Appliance for generating and storing cryptographic keys that is less susceptible to tampering and insider threats.</li>
+        </ul>
+    </ul>
+    <hr>
+    <h2>BIOS / UEFI Cooling Options</h2>
+    <ul>
+        <li>BIOS and UEFI can configure fans</li>
+        <ul>
+            <li>Quiet Mode</li>
+            <ul>
+                <li>Reduces the fan speed and allows higher temperatures to occur</li>
+            </ul>
+            <li>Balanced Mode</li>
+            <ul>
+                <li>Normal setting on most coputers by default</li>
+            </ul>
+            <li>Cool Mode</li>
+            <ul>
+                <li>Able to run fans harder and faster to create more air flow</li>
+            </ul>
+        </ul>
+        <li>Overclocking the processor generates excess heat</li>
+        <li>The motherboard has built-in temperature sensors</li>
+        <ul>
+            <li>Temperature is rising</li>
+            <ul>
+                <li>Speed Up</li>
+            </ul>
+            <li>Temperature is lower than set point</li>
+            <ul>
+                <li>Turn off or slow down</li>
+            </ul>
+        </ul>
+    </ul>
+    <a href="./5.html">Back ()</a>
+    <a href="./7.html">Next ()</a>
+</body>
+</html>
